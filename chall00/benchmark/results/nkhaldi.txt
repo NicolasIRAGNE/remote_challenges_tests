@@ -1,5 +1,5 @@
-/usr/bin/ld: /tmp/ccS2GgAp.o: in function `easy_tests':
+/usr/bin/ld: /tmp/cciUBokp.o: in function `easy_tests':
 benchmark.c:(.text+0x50): undefined reference to `ft_necklace'
-/usr/bin/ld: /tmp/ccS2GgAp.o: in function `medium_tests':
+/usr/bin/ld: /tmp/cciUBokp.o: in function `medium_tests':
 benchmark.c:(.text+0x16a): undefined reference to `ft_necklace'
 collect2: error: ld returned 1 exit status

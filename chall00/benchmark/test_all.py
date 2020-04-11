@@ -6,10 +6,11 @@
 #    By: niragne <niragne@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/10 16:04:46 by niragne           #+#    #+#              #
-#    Updated: 2020/04/11 13:28:38 by niragne          ###   ########.fr        #
+#    Updated: 2020/04/11 13:35:40 by niragne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+import atexit
 import os
 import subprocess
 from termcolor import colored
@@ -26,6 +27,9 @@ _BLACKLIST		= ["benchmark.c"]
 def	exec_command(cmd):
 	p = subprocess.check_output(args=cmd, stderr=subprocess.STDOUT, universal_newlines=True, timeout=_TIMEOUT)
 	return p
+
+def cleanup():
+	exec_command(["/bin/rm", _BENCHMARK_OBJ, "./a.out"])
 
 def main():
 	exec_command(["g++", "-c", _BENCHMARK_SRC])
@@ -89,4 +93,5 @@ def main():
 	print("PASSED: " + str(passed) + " KO: " + str(failed) + " TIMEOUT: " + str(timedout) + " COMPILE ERROR: " + str(compile_error))
 
 if __name__ == "__main__":
+	atexit.register(cleanup)
 	main()
