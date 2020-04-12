@@ -6,7 +6,7 @@
 /*   By: niragne <niragne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:46:58 by niragne           #+#    #+#             */
-/*   Updated: 2020/04/11 13:24:06 by niragne          ###   ########.fr       */
+/*   Updated: 2020/04/12 12:31:50 by niragne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define MEDIUM_LENGTH 100
+#ifndef MEDIUM_TEST_LENGTH
+# define MEDIUM_TEST_LENGTH 20
+#endif
+
+#ifndef MEDIUM_TEST_SIZE
+# define MEDIUM_TEST_SIZE USHRT_MAX
+#endif
 
 int ft_necklace(char *s1, char *s2);
 
@@ -83,8 +89,8 @@ int	medium_tests(void)
 {
 	int i = 0;
 	int failed = 0;
-	char	s1[10000];
-	char	s2[10000];
+	char	s1[MEDIUM_TEST_SIZE];
+	char	s2[MEDIUM_TEST_SIZE];
 
 	clock_t start;
 	clock_t stop;
@@ -97,7 +103,7 @@ int	medium_tests(void)
 	s1[sizeof(s1) - 1] = 0;
 	s2[sizeof(s2) - 1] = 0;
 
-	while (i < MEDIUM_LENGTH)
+	while (i < MEDIUM_TEST_LENGTH)
 	{
 		int index1 = rand() % sizeof(s1 - 1);
 		int index2 = rand() % sizeof(s2 - 1);
@@ -127,7 +133,7 @@ int	medium_tests(void)
 int main(int ac, char** av)
 {
 	int ret = 0;
-	srand(time(NULL));
+	// srand(time(NULL));
 	printf("EASY TESTS:\n");
 	ret += easy_tests();
 	printf("\n");

@@ -1,3 +1,0 @@
-/usr/bin/ld: /tmp/ccF7RNmq.o: in function `main':
-benchmark.c:(.text.startup+0x0): multiple definition of `main'; /tmp/ccT5kTmH.o:cyhuet.c:(.text.startup+0x0): first defined here
-collect2: error: ld returned 1 exit status
