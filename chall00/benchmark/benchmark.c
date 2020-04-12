@@ -6,7 +6,7 @@
 /*   By: niragne <niragne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:46:58 by niragne           #+#    #+#             */
-/*   Updated: 2020/04/12 12:31:50 by niragne          ###   ########.fr       */
+/*   Updated: 2020/04/12 14:08:31 by niragne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <stdlib.h>
 
 #ifndef MEDIUM_TEST_LENGTH
-# define MEDIUM_TEST_LENGTH 20
+# define MEDIUM_TEST_LENGTH 100
 #endif
 
 #ifndef MEDIUM_TEST_SIZE
