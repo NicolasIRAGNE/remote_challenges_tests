@@ -1,24 +1,43 @@
+EASY TESTS:
+Test 0: OK
+Test 1: KO
+Test 2: KO
+Test 3: OK
+Test 4: KO
+Test 5: OK
+Test 6: OK
+Test 7: OK
+Test 8: KO
+Test 9: OK
+Test 10: OK
+Test 11: KO
+Test 12: OK
+easy tests ended in 0.000010 with 5 failed tests
+
+MEDIUM TESTS:
+medium tests passed in 0.003881
+
 =================================================================
-==1675==ERROR: AddressSanitizer: heap-use-after-free on address 0x615000000080 at pc 0x55cd94a27200 bp 0x7ffe15198290 sp 0x7ffe15198288
+==9363==ERROR: AddressSanitizer: heap-use-after-free on address 0x615000000080 at pc 0x55a7fd1ff200 bp 0x7fffcc1d3430 sp 0x7fffcc1d3428
 READ of size 1 at 0x615000000080 thread T0
-    #0 0x55cd94a271ff in ft_strlen ../mlaraki.c:14
-    #1 0x55cd94a27926 in ft_necklace ../mlaraki.c:109
-    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
-    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
-    #4 0x55cd94a270e9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10e9)
+    #0 0x55a7fd1ff1ff in ft_strlen ../mlaraki.c:14
+    #1 0x55a7fd1ff926 in ft_necklace ../mlaraki.c:109
+    #2 0x55a7fd1ffae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f2676bf9bba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x55a7fd1ff0e9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10e9)
 
 0x615000000080 is located 0 bytes inside of 509-byte region [0x615000000080,0x61500000027d)
 freed by thread T0 here:
-    #0 0x7f38b8128187 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.5+0x107187)
-    #1 0x55cd94a2791a in ft_necklace ../mlaraki.c:108
-    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
-    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f2676e9a187 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.5+0x107187)
+    #1 0x55a7fd1ff91a in ft_necklace ../mlaraki.c:108
+    #2 0x55a7fd1ffae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f2676bf9bba in __libc_start_main ../csu/libc-start.c:308
 
 previously allocated by thread T0 here:
-    #0 0x7f38b8128538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x55cd94a278b8 in ft_necklace ../mlaraki.c:102
-    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
-    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f2676e9a538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x55a7fd1ff8b8 in ft_necklace ../mlaraki.c:102
+    #2 0x55a7fd1ffae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f2676bf9bba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-use-after-free ../mlaraki.c:14 in ft_strlen
 Shadow bytes around the buggy address:
@@ -53,4 +72,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==1675==ABORTING
+==9363==ABORTING

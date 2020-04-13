@@ -6,5 +6,5 @@ Test 3: OK
 Test 4: OK
 Test 5: OK
 Test 6: OK
-easy tests passed in 0.000014
+easy tests passed in 0.000008
 

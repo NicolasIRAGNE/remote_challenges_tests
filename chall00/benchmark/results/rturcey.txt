@@ -1,19 +1,19 @@
-Timed out after 20 seconds=================================================================
-==1368==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013f at pc 0x55967cc10200 bp 0x7ffc50999c30 sp 0x7ffc50999c28
+Timed out after 40 seconds=================================================================
+==9120==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013f at pc 0x558a11745200 bp 0x7ffd53865340 sp 0x7ffd53865338
 READ of size 1 at 0x61100000013f thread T0
-    #0 0x55967cc101ff in ft_strlen ../rturcey.c:8
-    #1 0x55967cc10335 in ft_reverse ../rturcey.c:30
-    #2 0x55967cc10808 in ft_necklace ../rturcey.c:81
-    #3 0x55967cc109e0 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e0)
-    #4 0x7f23bbd53bba in __libc_start_main ../csu/libc-start.c:308
-    #5 0x55967cc100e9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10e9)
+    #0 0x558a117451ff in ft_strlen ../rturcey.c:8
+    #1 0x558a11745335 in ft_reverse ../rturcey.c:30
+    #2 0x558a11745808 in ft_necklace ../rturcey.c:81
+    #3 0x558a117459e0 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e0)
+    #4 0x7f112dce9bba in __libc_start_main ../csu/libc-start.c:308
+    #5 0x558a117450e9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10e9)
 
 0x61100000013f is located 0 bytes to the right of 255-byte region [0x611000000040,0x61100000013f)
 allocated by thread T0 here:
-    #0 0x7f23bbff4538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x55967cc10717 in ft_necklace ../rturcey.c:72
-    #2 0x55967cc109e0 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e0)
-    #3 0x7f23bbd53bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f112df8a538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x558a11745717 in ft_necklace ../rturcey.c:72
+    #2 0x558a117459e0 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e0)
+    #3 0x7f112dce9bba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-buffer-overflow ../rturcey.c:8 in ft_strlen
 Shadow bytes around the buggy address:
@@ -48,4 +48,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==1368==ABORTING
+==9120==ABORTING

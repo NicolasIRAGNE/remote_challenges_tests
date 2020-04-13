@@ -9,19 +9,19 @@ Test 6: KO (expected #0a0a0a)
 easy tests ended in 0.000011 with 7 failed tests
 
 =================================================================
-==6361==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000018 at pc 0x55c80eced3ab bp 0x7ffc956538d0 sp 0x7ffc956538c8
+==6965==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000018 at pc 0x55d1cfc983ab bp 0x7ffc48daba60 sp 0x7ffc48daba58
 WRITE of size 1 at 0x602000000018 thread T0
-    #0 0x55c80eced3aa in ft_rgb2hex ../bapmarti.c:46
-    #1 0x55c80eced3e6 in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x13e6)
-    #2 0x7f825292fbba in __libc_start_main ../csu/libc-start.c:308
-    #3 0x55c80eced0b9 in _start (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x10b9)
+    #0 0x55d1cfc983aa in ft_rgb2hex ../bapmarti.c:46
+    #1 0x55d1cfc983e6 in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x13e6)
+    #2 0x7f87da15fbba in __libc_start_main ../csu/libc-start.c:308
+    #3 0x55d1cfc980b9 in _start (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x10b9)
 
 0x602000000018 is located 0 bytes to the right of 8-byte region [0x602000000010,0x602000000018)
 allocated by thread T0 here:
-    #0 0x7f8252bd0538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x55c80eced28e in ft_rgb2hex ../bapmarti.c:34
-    #2 0x55c80eced3e6 in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x13e6)
-    #3 0x7f825292fbba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f87da400538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x55d1cfc9828e in ft_rgb2hex ../bapmarti.c:34
+    #2 0x55d1cfc983e6 in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x13e6)
+    #3 0x7f87da15fbba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-buffer-overflow ../bapmarti.c:46 in ft_rgb2hex
 Shadow bytes around the buggy address:
@@ -56,4 +56,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==6361==ABORTING
+==6965==ABORTING

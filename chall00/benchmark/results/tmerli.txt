@@ -1,18 +1,37 @@
-Timed out after 20 seconds=================================================================
-==968==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013e at pc 0x7f5aab548c80 bp 0x7ffeb287f3f0 sp 0x7ffeb287eba0
+EASY TESTS:
+Test 0: OK
+Test 1: OK
+Test 2: OK
+Test 3: OK
+Test 4: OK
+Test 5: OK
+Test 6: OK
+Test 7: OK
+Test 8: OK
+Test 9: OK
+Test 10: OK
+Test 11: OK
+Test 12: OK
+easy tests passed in 0.000013
+
+MEDIUM TESTS:
+medium tests passed in 9.855782
+
+=================================================================
+==8893==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013e at pc 0x7f52fbaf8c80 bp 0x7ffd9f5056c0 sp 0x7ffd9f504e70
 WRITE of size 255 at 0x61100000013e thread T0
-    #0 0x7f5aab548c7f  (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f)
-    #1 0x558aee4224c1 in ft_necklace ../tmerli.c:30
-    #2 0x558aee422730 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1730)
-    #3 0x7f5aab317bba in __libc_start_main ../csu/libc-start.c:308
-    #4 0x558aee422149 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1149)
+    #0 0x7f52fbaf8c7f  (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f)
+    #1 0x5611929284c1 in ft_necklace ../tmerli.c:30
+    #2 0x561192928730 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1730)
+    #3 0x7f52fb8c7bba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x561192928149 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1149)
 
 0x61100000013e is located 0 bytes to the right of 254-byte region [0x611000000040,0x61100000013e)
 allocated by thread T0 here:
-    #0 0x7f5aab5b8538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x558aee422480 in ft_necklace ../tmerli.c:29
-    #2 0x558aee422730 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1730)
-    #3 0x7f5aab317bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f52fbb68538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x561192928480 in ft_necklace ../tmerli.c:29
+    #2 0x561192928730 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1730)
+    #3 0x7f52fb8c7bba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-buffer-overflow (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f) 
 Shadow bytes around the buggy address:
@@ -47,4 +66,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==968==ABORTING
+==8893==ABORTING

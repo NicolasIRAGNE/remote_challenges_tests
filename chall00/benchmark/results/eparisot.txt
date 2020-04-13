@@ -1,0 +1,51 @@
+=================================================================
+==9195==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7fff75a32c5f at pc 0x5604ac8e9338 bp 0x7fff75a32a70 sp 0x7fff75a32a68
+WRITE of size 1 at 0x7fff75a32c5f thread T0
+    #0 0x5604ac8e9337 in rotate ../eparisot.c:16
+    #1 0x5604ac8e947a in ft_necklace ../eparisot.c:42
+    #2 0x5604ac8e9662 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1662)
+    #3 0x7f40b0f6cbba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x5604ac8e90c9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10c9)
+
+Address 0x7fff75a32c5f is located in stack of thread T0 at offset 351 in frame
+    #0 0x5604ac8e94e4 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x14e4)
+
+  This frame has 2 object(s):
+    [32, 287) 's1' (line 18)
+    [352, 607) 's2' (line 19) <== Memory access at offset 351 underflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow ../eparisot.c:16 in rotate
+Shadow bytes around the buggy address:
+  0x10006eb3e530: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e540: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e550: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e560: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e570: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10006eb3e580: 00 00 00 07 f2 f2 f2 f2 f2 f2 f2[f2]00 00 00 00
+  0x10006eb3e590: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e5a0: 00 00 00 00 00 00 00 00 00 00 00 07 f3 f3 f3 f3
+  0x10006eb3e5b0: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e5c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10006eb3e5d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==9195==ABORTING

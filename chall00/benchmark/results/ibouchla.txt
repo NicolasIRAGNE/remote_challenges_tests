@@ -1,11 +1,30 @@
-Timed out after 20 seconds
+EASY TESTS:
+Test 0: OK
+Test 1: OK
+Test 2: OK
+Test 3: OK
+Test 4: OK
+Test 5: OK
+Test 6: OK
+Test 7: OK
+Test 8: OK
+Test 9: OK
+Test 10: OK
+Test 11: OK
+Test 12: OK
+easy tests passed in 0.000011
+
+MEDIUM TESTS:
+medium tests passed in 9.176640
+
+
 =================================================================
-==924==ERROR: LeakSanitizer: detected memory leaks
+==8854==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 255 byte(s) in 1 object(s) allocated from:
-    #0 0x7f4b3ff51538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x559393a0c38e in ft_necklace ../ibouchla.c:17
-    #2 0x559393a0c5b1 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x15b1)
-    #3 0x7f4b3fcb0bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f12f2482538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x5622e043d38e in ft_necklace ../ibouchla.c:17
+    #2 0x5622e043d5b1 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x15b1)
+    #3 0x7f12f21e1bba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: 255 byte(s) leaked in 1 allocation(s).

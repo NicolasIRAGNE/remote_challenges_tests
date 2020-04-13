@@ -12,26 +12,26 @@ Test 9: OK
 Test 10: OK
 Test 11: OK
 Test 12: OK
-easy tests passed in 0.000013
+easy tests passed in 0.000015
 
 MEDIUM TESTS:
-medium tests passed in 10.597975
+medium tests passed in 0.055174
 
 =================================================================
-==1332==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013e at pc 0x7f9bbcef2c80 bp 0x7ffd432e6da0 sp 0x7ffd432e6550
+==9105==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013e at pc 0x7f2a23cacc80 bp 0x7ffe82ecf120 sp 0x7ffe82ece8d0
 WRITE of size 255 at 0x61100000013e thread T0
-    #0 0x7f9bbcef2c7f  (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f)
-    #1 0x560c15e4929b in ft_necklace ../roalvare.c:20
-    #2 0x560c15e49519 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1519)
-    #3 0x7f9bbccc1bba in __libc_start_main ../csu/libc-start.c:308
-    #4 0x560c15e49139 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1139)
+    #0 0x7f2a23cacc7f  (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f)
+    #1 0x55ca3cffb29b in ft_necklace ../roalvare.c:20
+    #2 0x55ca3cffb519 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1519)
+    #3 0x7f2a23a7bbba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x55ca3cffb139 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1139)
 
 0x61100000013e is located 0 bytes to the right of 254-byte region [0x611000000040,0x61100000013e)
 allocated by thread T0 here:
-    #0 0x7f9bbcf6271e in calloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10771e)
-    #1 0x560c15e4926f in ft_necklace ../roalvare.c:16
-    #2 0x560c15e49519 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1519)
-    #3 0x7f9bbccc1bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f2a23d1c71e in calloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10771e)
+    #1 0x55ca3cffb26f in ft_necklace ../roalvare.c:16
+    #2 0x55ca3cffb519 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1519)
+    #3 0x7f2a23a7bbba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-buffer-overflow (/lib/x86_64-linux-gnu/libasan.so.5+0x97c7f) 
 Shadow bytes around the buggy address:
@@ -66,4 +66,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==1332==ABORTING
+==9105==ABORTING

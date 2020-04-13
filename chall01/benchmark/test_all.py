@@ -6,7 +6,7 @@
 #    By: niragne <niragne@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/10 16:04:46 by niragne           #+#    #+#              #
-#    Updated: 2020/04/13 13:32:42 by niragne          ###   ########.fr        #
+#    Updated: 2020/04/13 22:10:36 by niragne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -133,9 +133,7 @@ def main():
 				print("error: could not open %s ... aborting" % current_file)
 			current_test = Answer(filename, fd)
 			benchmark.total += 1
-			resource.setrlimit(resource.RLIMIT_DATA, (1e8, hard))
 			tests_results = process_tests(benchmark, current_test)
-			resource.setrlimit(resource.RLIMIT_DATA, (soft, hard))
 			memtest_results = process_memtest(benchmark, current_test)
 
 			print(filename + ":\tMEMTEST: " + memtest_results + "\tTESTS: " + tests_results)

@@ -6,5 +6,5 @@ Test 3: KO (expected #00ffff)
 Test 4: KO (expected #ff00ff)
 Test 5: KO (expected #ffff00)
 Test 6: KO (expected #0a0a0a)
-easy tests ended in 0.000015 with 7 failed tests
+easy tests ended in 0.000012 with 7 failed tests
 

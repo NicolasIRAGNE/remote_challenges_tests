@@ -12,8 +12,8 @@ Test 9: OK
 Test 10: OK
 Test 11: OK
 Test 12: OK
-easy tests passed in 0.000014
+easy tests passed in 0.000011
 
 MEDIUM TESTS:
-medium tests passed in 0.121225
+medium tests passed in 0.003900
 

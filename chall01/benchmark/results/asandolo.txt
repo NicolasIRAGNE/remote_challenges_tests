@@ -6,24 +6,24 @@ Test 3: KO (expected #00ffff)
 Test 4: KO (expected #ff00ff)
 Test 5: KO (expected #ffff00)
 Test 6: KO (expected #0a0a0a)
-easy tests ended in 0.000013 with 6 failed tests
+easy tests ended in 0.000012 with 6 failed tests
 
 =================================================================
-==6336==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000013 at pc 0x562c1f6f5235 bp 0x7fff6f829580 sp 0x7fff6f829578
+==6940==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000013 at pc 0x5651223f5235 bp 0x7ffe8f6b7450 sp 0x7ffe8f6b7448
 READ of size 1 at 0x602000000013 thread T0
-    #0 0x562c1f6f5234 in convert2 ../asandolo.c:10
-    #1 0x562c1f6f5387 in convert ../asandolo.c:25
-    #2 0x562c1f6f556a in ft_rgb2hex ../asandolo.c:62
-    #3 0x562c1f6f56bb in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x16bb)
-    #4 0x7f6ccb148bba in __libc_start_main ../csu/libc-start.c:308
-    #5 0x562c1f6f5119 in _start (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x1119)
+    #0 0x5651223f5234 in convert2 ../asandolo.c:10
+    #1 0x5651223f5387 in convert ../asandolo.c:25
+    #2 0x5651223f556a in ft_rgb2hex ../asandolo.c:62
+    #3 0x5651223f56bb in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x16bb)
+    #4 0x7f874bd8cbba in __libc_start_main ../csu/libc-start.c:308
+    #5 0x5651223f5119 in _start (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x1119)
 
 0x602000000013 is located 0 bytes to the right of 3-byte region [0x602000000010,0x602000000013)
 allocated by thread T0 here:
-    #0 0x7f6ccb3e9538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
-    #1 0x562c1f6f552b in ft_rgb2hex ../asandolo.c:57
-    #2 0x562c1f6f56bb in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x16bb)
-    #3 0x7f6ccb148bba in __libc_start_main ../csu/libc-start.c:308
+    #0 0x7f874c02d538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x5651223f552b in ft_rgb2hex ../asandolo.c:57
+    #2 0x5651223f56bb in main (/home/ahab/remote-challenges/chall01/benchmark/__temp+0x16bb)
+    #3 0x7f874bd8cbba in __libc_start_main ../csu/libc-start.c:308
 
 SUMMARY: AddressSanitizer: heap-buffer-overflow ../asandolo.c:10 in convert2
 Shadow bytes around the buggy address:
@@ -58,4 +58,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   Left alloca redzone:     ca
   Right alloca redzone:    cb
   Shadow gap:              cc
-==6336==ABORTING
+==6940==ABORTING

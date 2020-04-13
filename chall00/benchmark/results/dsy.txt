@@ -15,5 +15,5 @@ Test 12: OK
 easy tests passed in 0.000009
 
 MEDIUM TESTS:
-medium tests passed in 0.229077
+medium tests passed in 0.004325
 

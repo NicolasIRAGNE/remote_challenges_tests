@@ -1,14 +1,33 @@
-Timed out after 20 secondsAddressSanitizer:DEADLYSIGNAL
+EASY TESTS:
+Test 0: OK
+Test 1: OK
+Test 2: OK
+Test 3: OK
+Test 4: OK
+Test 5: OK
+Test 6: OK
+Test 7: OK
+Test 8: OK
+Test 9: OK
+Test 10: OK
+Test 11: OK
+Test 12: OK
+easy tests passed in 0.000014
+
+MEDIUM TESTS:
+medium tests passed in 3.275685
+
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==1139==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5627dab8e35f bp 0x7fff5ef6cee0 sp 0x7fff5ef6cec0 T0)
-==1139==The signal is caused by a READ memory access.
-==1139==Hint: address points to the zero page.
-    #0 0x5627dab8e35e in add2word ../amalsago.c:55
-    #1 0x5627dab8e6bb in ft_necklace ../amalsago.c:92
-    #2 0x5627dab8e9e1 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e1)
-    #3 0x7fd378fa5bba in __libc_start_main ../csu/libc-start.c:308
-    #4 0x5627dab8e119 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1119)
+==8988==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55b6a649135f bp 0x7ffc036beab0 sp 0x7ffc036bea90 T0)
+==8988==The signal is caused by a READ memory access.
+==8988==Hint: address points to the zero page.
+    #0 0x55b6a649135e in add2word ../amalsago.c:55
+    #1 0x55b6a64916bb in ft_necklace ../amalsago.c:92
+    #2 0x55b6a64919e1 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x19e1)
+    #3 0x7f192b09fbba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x55b6a6491119 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1119)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV ../amalsago.c:55 in add2word
-==1139==ABORTING
+==8988==ABORTING

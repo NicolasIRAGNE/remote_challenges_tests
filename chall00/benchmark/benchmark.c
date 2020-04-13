@@ -6,7 +6,7 @@
 /*   By: niragne <niragne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/11 11:46:58 by niragne           #+#    #+#             */
-/*   Updated: 2020/04/12 15:25:44 by niragne          ###   ########.fr       */
+/*   Updated: 2020/04/13 22:37:41 by niragne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 #include <stdlib.h>
 
 #ifndef MEDIUM_TEST_LENGTH
-# define MEDIUM_TEST_LENGTH 100
+# define MEDIUM_TEST_LENGTH 5
 #endif
 
 #ifndef MEDIUM_TEST_SIZE
-# define MEDIUM_TEST_SIZE USHRT_MAX
+# define MEDIUM_TEST_SIZE (USHRT_MAX / 2)
 #endif
 
 int ft_necklace(char *s1, char *s2);

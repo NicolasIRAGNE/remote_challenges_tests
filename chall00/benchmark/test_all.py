@@ -6,7 +6,7 @@
 #    By: niragne <niragne@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/10 16:04:46 by niragne           #+#    #+#              #
-#    Updated: 2020/04/12 15:18:27 by niragne          ###   ########.fr        #
+#    Updated: 2020/04/13 22:37:32 by niragne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ _LOGIN_SRC		= ""
 _EXECNAME		= "./__temp"
 _TESTS_PATH		= "../"
 _RESULT_PATH	= "./results"
-_TIMEOUT		= 20
+_TIMEOUT		= 40
 _BLACKLIST		= ["benchmark.c"]
 
 class Answer:

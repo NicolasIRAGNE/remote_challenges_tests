@@ -12,8 +12,8 @@ Test 9: OK
 Test 10: OK
 Test 11: OK
 Test 12: OK
-easy tests passed in 0.000012
+easy tests passed in 0.000010
 
 MEDIUM TESTS:
-medium tests ended in 9.163502 with 51 failed tests
+medium tests ended in 0.030002 with 1 failed tests
 

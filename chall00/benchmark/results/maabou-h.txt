@@ -1,6 +1,6 @@
 /usr/bin/ld: benchmark.o: in function `main':
-benchmark.c:(.text+0x2b3): multiple definition of `main'; /tmp/ccnRbvoc.o:maabou-h.c:(.text+0x1b3): first defined here
+benchmark.c:(.text+0x2b3): multiple definition of `main'; /tmp/ccU2r9sh.o:maabou-h.c:(.text+0x1b3): first defined here
 collect2: error: ld returned 1 exit status
 /usr/bin/ld: memtest.o: in function `main':
-memtest.c:(.text+0x0): multiple definition of `main'; /tmp/ccAdJlKe.o:/home/ahab/remote-challenges/chall00/benchmark/../maabou-h.c:32: first defined here
+memtest.c:(.text+0x0): multiple definition of `main'; /tmp/cc2D6eSk.o:/home/ahab/remote-challenges/chall00/benchmark/../maabou-h.c:32: first defined here
 collect2: error: ld returned 1 exit status
