@@ -1,0 +1,50 @@
+=================================================================
+==1564==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013f at pc 0x7f25bd67df7b bp 0x7ffffd4ac450 sp 0x7ffffd4abc00
+WRITE of size 2 at 0x61100000013f thread T0
+    #0 0x7f25bd67df7a in strncat (/lib/x86_64-linux-gnu/libasan.so.5+0xc1f7a)
+    #1 0x5644ddd8734c in ft_necklace ../etieberg.c:20
+    #2 0x5644ddd8754e in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x154e)
+    #3 0x7f25bd422bba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x5644ddd87149 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1149)
+
+0x61100000013f is located 0 bytes to the right of 255-byte region [0x611000000040,0x61100000013f)
+allocated by thread T0 here:
+    #0 0x7f25bd6c3538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x5644ddd8722d in ft_necklace ../etieberg.c:10
+    #2 0x5644ddd8754e in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x154e)
+    #3 0x7f25bd422bba in __libc_start_main ../csu/libc-start.c:308
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/lib/x86_64-linux-gnu/libasan.so.5+0xc1f7a) in strncat
+Shadow bytes around the buggy address:
+  0x0c227fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff8020: 00 00 00 00 00 00 00[07]fa fa fa fa fa fa fa fa
+  0x0c227fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==1564==ABORTING

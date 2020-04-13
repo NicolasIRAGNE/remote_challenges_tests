@@ -1,0 +1,10 @@
+EASY TESTS:
+Test 0: OK
+Test 1: OK
+Test 2: OK
+Test 3: OK
+Test 4: OK
+Test 5: OK
+Test 6: OK
+easy tests passed in 0.000015
+

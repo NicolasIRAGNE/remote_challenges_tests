@@ -1,0 +1,84 @@
+../julnolle.c:13:1: error: unknown type name ‘size_t’
+   13 | size_t ft_strlen(const char *str)
+      | ^~~~~~
+../julnolle.c:1:1: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+  +++ |+#include <stddef.h>
+    1 | /* ************************************************************************** */
+../julnolle.c: In function ‘ft_strlen’:
+../julnolle.c:15:2: error: unknown type name ‘size_t’
+   15 |  size_t i;
+      |  ^~~~~~
+../julnolle.c:15:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c: At top level:
+../julnolle.c:23:38: error: unknown type name ‘size_t’
+   23 | int  is_necklace(char *s1, char *s2, size_t rot, size_t len1)
+      |                                      ^~~~~~
+../julnolle.c:23:38: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:23:50: error: unknown type name ‘size_t’
+   23 | int  is_necklace(char *s1, char *s2, size_t rot, size_t len1)
+      |                                                  ^~~~~~
+../julnolle.c:23:50: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c: In function ‘ft_necklace’:
+../julnolle.c:39:2: error: unknown type name ‘size_t’
+   39 |  size_t len1;
+      |  ^~~~~~
+../julnolle.c:39:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:40:2: error: unknown type name ‘size_t’
+   40 |  size_t len2;
+      |  ^~~~~~
+../julnolle.c:40:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:41:2: error: unknown type name ‘size_t’
+   41 |  size_t i;
+      |  ^~~~~~
+../julnolle.c:41:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:43:12: error: ‘NULL’ undeclared (first use in this function)
+   43 |  if (s1 != NULL || s2 != NULL)
+      |            ^~~~
+../julnolle.c:43:12: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:43:12: note: each undeclared identifier is reported only once for each function it appears in
+../julnolle.c:54:8: warning: implicit declaration of function ‘is_necklace’; did you mean ‘ft_necklace’? [-Wimplicit-function-declaration]
+   54 |    if (is_necklace(s1, s2, i, len1))
+      |        ^~~~~~~~~~~
+      |        ft_necklace
+../julnolle.c:13:1: error: unknown type name ‘size_t’
+   13 | size_t ft_strlen(const char *str)
+      | ^~~~~~
+../julnolle.c:1:1: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+  +++ |+#include <stddef.h>
+    1 | /* ************************************************************************** */
+../julnolle.c: In function ‘ft_strlen’:
+../julnolle.c:15:2: error: unknown type name ‘size_t’
+   15 |  size_t i;
+      |  ^~~~~~
+../julnolle.c:15:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c: At top level:
+../julnolle.c:23:38: error: unknown type name ‘size_t’
+   23 | int  is_necklace(char *s1, char *s2, size_t rot, size_t len1)
+      |                                      ^~~~~~
+../julnolle.c:23:38: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:23:50: error: unknown type name ‘size_t’
+   23 | int  is_necklace(char *s1, char *s2, size_t rot, size_t len1)
+      |                                                  ^~~~~~
+../julnolle.c:23:50: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c: In function ‘ft_necklace’:
+../julnolle.c:39:2: error: unknown type name ‘size_t’
+   39 |  size_t len1;
+      |  ^~~~~~
+../julnolle.c:39:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:40:2: error: unknown type name ‘size_t’
+   40 |  size_t len2;
+      |  ^~~~~~
+../julnolle.c:40:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:41:2: error: unknown type name ‘size_t’
+   41 |  size_t i;
+      |  ^~~~~~
+../julnolle.c:41:2: note: ‘size_t’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:43:12: error: ‘NULL’ undeclared (first use in this function)
+   43 |  if (s1 != NULL || s2 != NULL)
+      |            ^~~~
+../julnolle.c:43:12: note: ‘NULL’ is defined in header ‘<stddef.h>’; did you forget to ‘#include <stddef.h>’?
+../julnolle.c:43:12: note: each undeclared identifier is reported only once for each function it appears in
+../julnolle.c:54:8: warning: implicit declaration of function ‘is_necklace’; did you mean ‘ft_necklace’? [-Wimplicit-function-declaration]
+   54 |    if (is_necklace(s1, s2, i, len1))
+      |        ^~~~~~~~~~~
+      |        ft_necklace

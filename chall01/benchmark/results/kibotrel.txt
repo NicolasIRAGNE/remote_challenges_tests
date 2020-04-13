@@ -1,0 +1,10 @@
+EASY TESTS:
+Test 0: KO (expected #000000)
+Test 1: KO (expected #000100)
+Test 2: OK
+Test 3: KO (expected #00ffff)
+Test 4: OK
+Test 5: OK
+Test 6: KO (expected #0a0a0a)
+easy tests ended in 0.000011 with 4 failed tests
+

@@ -1,0 +1,6 @@
+/usr/bin/ld: benchmark.o: in function `easy_tests':
+benchmark.c:(.text+0x8b): undefined reference to `ft_rgb2hex'
+collect2: error: ld returned 1 exit status
+/usr/bin/ld: memtest.o: in function `main':
+memtest.c:(.text+0x1f): undefined reference to `ft_rgb2hex'
+collect2: error: ld returned 1 exit status

@@ -1,0 +1,8 @@
+/usr/bin/ld: benchmark.o: in function `easy_tests':
+benchmark.c:(.text+0x6d): undefined reference to `ft_necklace'
+/usr/bin/ld: benchmark.o: in function `medium_tests':
+benchmark.c:(.text+0x200): undefined reference to `ft_necklace'
+collect2: error: ld returned 1 exit status
+/usr/bin/ld: memtest.o: in function `main':
+memtest.c:(.text+0x18a): undefined reference to `ft_necklace'
+collect2: error: ld returned 1 exit status

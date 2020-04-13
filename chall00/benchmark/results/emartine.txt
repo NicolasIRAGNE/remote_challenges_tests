@@ -1,0 +1,30 @@
+EASY TESTS:
+Test 0: OK
+Test 1: OK
+Test 2: OK
+Test 3: OK
+Test 4: OK
+Test 5: OK
+Test 6: OK
+Test 7: OK
+Test 8: OK
+Test 9: OK
+Test 10: OK
+Test 11: OK
+Test 12: OK
+easy tests passed in 0.000012
+
+MEDIUM TESTS:
+medium tests passed in 0.016471
+
+
+=================================================================
+==2254==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 509 byte(s) in 1 object(s) allocated from:
+    #0 0x7f6358f9d538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x557172846200 in ft_necklace ../emartine.c:10
+    #2 0x5571728463ed in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x13ed)
+    #3 0x7f6358cfcbba in __libc_start_main ../csu/libc-start.c:308
+
+SUMMARY: AddressSanitizer: 509 byte(s) leaked in 1 allocation(s).

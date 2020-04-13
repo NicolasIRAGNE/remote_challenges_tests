@@ -1,0 +1,56 @@
+=================================================================
+==1675==ERROR: AddressSanitizer: heap-use-after-free on address 0x615000000080 at pc 0x55cd94a27200 bp 0x7ffe15198290 sp 0x7ffe15198288
+READ of size 1 at 0x615000000080 thread T0
+    #0 0x55cd94a271ff in ft_strlen ../mlaraki.c:14
+    #1 0x55cd94a27926 in ft_necklace ../mlaraki.c:109
+    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
+    #4 0x55cd94a270e9 in _start (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x10e9)
+
+0x615000000080 is located 0 bytes inside of 509-byte region [0x615000000080,0x61500000027d)
+freed by thread T0 here:
+    #0 0x7f38b8128187 in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.5+0x107187)
+    #1 0x55cd94a2791a in ft_necklace ../mlaraki.c:108
+    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
+
+previously allocated by thread T0 here:
+    #0 0x7f38b8128538 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x107538)
+    #1 0x55cd94a278b8 in ft_necklace ../mlaraki.c:102
+    #2 0x55cd94a27ae5 in main (/home/ahab/remote-challenges/chall00/benchmark/__temp+0x1ae5)
+    #3 0x7f38b7e87bba in __libc_start_main ../csu/libc-start.c:308
+
+SUMMARY: AddressSanitizer: heap-use-after-free ../mlaraki.c:14 in ft_strlen
+Shadow bytes around the buggy address:
+  0x0c2a7fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2a7fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2a7fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2a7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2a7fff8000: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c2a7fff8010:[fd]fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8020: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8030: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8040: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c2a7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2a7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==1675==ABORTING
